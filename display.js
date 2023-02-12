@@ -1,0 +1,1 @@
+console.log(`Hello this is zain ul abdieen so i have the thins to do in this word`)
