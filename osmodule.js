@@ -7,6 +7,7 @@ console.log(user);
 // suppose we wan to take of the uptime of the system
 
 console.log(`The Uptime of my system is ${os.uptime()}`);
+console.log("The Release model of my Latop is : " + os.release())
 
 const osinfo = {
   name: os.type(),
