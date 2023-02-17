@@ -18,4 +18,7 @@ const osinfo = {
   oth: os.machine(),
   m: os.platform(),
 };
-console.log(osinfo);
+
+
+
+
