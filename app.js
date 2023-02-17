@@ -1,4 +1,3 @@
-
 // //return the filename
 // console.log(__filename)
 // var count=0;
@@ -11,13 +10,10 @@
 //     clearInterval(stop)
 
 // }
-let names = require('./names')
-let fun = require('./function')
+let names = require("./names");
+let fun = require("./function");
 
-fun(names.zain)
-fun(names.hamza)
+fun(names.zain);
+fun(names.hamza);
 
-
-require('./display')
-
-
+require("./display");
