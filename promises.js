@@ -16,9 +16,11 @@
 // }
 const { default: axios } = require('axios');
 //working with axious client library Axios is a promise based HTTP client for the browser and Node.js
+//Api
+//https://www.boredapi.com/api/activity
 
 const axiosrequest = require('axios')
-axiosrequest.get('https://www.boredapi.com/api/activity')
+axiosrequest.get('https://httpstat.us/402')
 .then(response =>{
     console.log(`you could ${response.data.activity}` )
 })
