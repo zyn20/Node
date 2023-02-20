@@ -9,3 +9,4 @@ async function getActivity() {
     console.log(error);
   }
 }
+getActivity();
