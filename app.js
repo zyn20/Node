@@ -10,10 +10,14 @@
 //     clearInterval(stop)
 
 // }
-let names = require("./names");
-let fun = require("./function");
+// let names = require("./names");
+// let fun = require("./function");
 
-fun(names.zain);
-fun(names.hamza);
+// fun(names.zain);
+// fun(names.hamza);
 
-require("./display");
+// require("./display");
+const _ =require('loadash')
+const items = [[1],[2],[3,4,5]]
+const result = _.flattendeep(items)
+console.log(result)
