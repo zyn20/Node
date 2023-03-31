@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const product = require("./data/products");
+const demo;
 
 app.get("/", (req, res) => {
   res.send(
