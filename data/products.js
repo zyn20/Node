@@ -414,6 +414,48 @@
     "https://i.dummyjson.com/data/products/30/1.jpg"
     }
     ]
+    const people = [
+      {
+         "id":1,
+         "name":"Zain",
+         "city":"bwp",
+         "room":303,
+         "Hall":"Iqbal"
 
-    module.exports={products}
+      },
+      {
+         "id":2,
+         "name":"Jawad",
+         "city":"khnpur",
+         "room":303,
+         "Hall":"Iqbal"
+
+      },
+      {
+         "id":3,
+         "name":"Ali",
+         "city":"FSD",
+         "room":112,
+         "Hall":"Iqbal"
+
+      },
+      {
+         "id":4,
+         "name":"saad",
+         "city":"wzrbad",
+         "room":8,
+         "Hall":"jinnah"
+
+      },
+      {
+         "id":5,
+         "name":"YAsho",
+         "city":"LHR",
+         "room":301,
+         "Hall":"Iqbal"
+
+      }
+    ]
+
+    module.exports={products,people}
 
