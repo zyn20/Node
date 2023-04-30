@@ -24,12 +24,61 @@ app.use(express.static('./methods-public'))
 
 
 app.use(express.urlencoded({extended:false}))
+//another middleware to parse the json from the form
+app.use(express.json())
 app.get('/',(req,res)=>
 {
 
   res.send('Home')
 })
-app.post('api/people',(req,res))
+
+app.post('/api/employees',(req,res)=>
+{
+  const {name} = req.body;
+  if(!name)
+  {
+    return res.status(404).json({success:false,msg : 'Provide the Name value'})
+  }
+res.status(201).json({success:true , people:name})
+
+})
+app.put('/api/employees/:id',(req,res)=>
+{
+  const {id}= req.params;
+  const {name}=req.body;
+  // console.log(id,name);
+  // res.send('Person with id = '+ id +' is trying to Access with name = ' + name);
+  const empid = people.find((employee)=>employee.id===Number(id));
+  if(!empid)
+  {
+    return res.status(404).json({success:false,msg : `No Employee exist with ID ${id}`})
+  }
+const newemp = people.map((emp)=>
+{
+  if(emp.id===Number(id))
+  {
+    emp.name=name;
+  }
+  return emp;
+})
+
+res.status(201).json({success:true , data:newemp})
+
+
+})
+
+app.post('/api/postman/employees',(req,res)=>
+{
+  const {name} = req.body;
+  if(!name)
+  {
+    return res.status(404).json({success:false,msg : 'Provide the Name value'})
+  }
+res.status(201).json({success:true ,data:[...people,name]})
+
+})
+
+
 app.get('/api/employees',(req,res)=>
 {
   res.status(201).json({success:true,data:people});
@@ -47,6 +96,6 @@ app.post('/login',(req,res)=>{
   }
 })
 
-app.listen(3000,()=>{
+app.listen(8080,()=>{
   console.log('Server is Listening at port 3000')
 })
