@@ -1,0 +1,6 @@
+npm init -y
+npm install express 
+npm i nodemon --save-dev
+In package-json
+go to scripts then add  "start": "nodemon app.js"s
+and run project as npm start
